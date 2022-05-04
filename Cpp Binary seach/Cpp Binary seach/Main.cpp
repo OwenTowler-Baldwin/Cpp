@@ -27,9 +27,8 @@ int main()
         64, 58, 78, 82, 13
      };
 
-    std::sort(&array_to_be_sorted[0], &array_to_be_sorted[array_size]);
-
-    std::sort(array_to_be_sorted, array_to_be_sorted + array_size);
+   
+    
 
     while (true) {
         std::cout << std::endl << std::endl << "Enter a number to find in the sequence: -1 to end" << std::endl;
@@ -39,7 +38,7 @@ int main()
         if (search_key == -1)
             break;
 
-        int r = binary_search(array_to_be_sorted, 0, array_size, v);
+        int r = binary_search(array_to_be_sorted, 0, array_size -1, v);
         if (r == -1)
             std::cout << "couldnt find" << v << "in the list" << std::endl;
         else
